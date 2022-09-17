@@ -4,10 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="HandheldFriendly" content="true">
+    <title>чай, индийский чай</title>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <h1></h1>
-    <h2></h2>
+    <div class="plain">
+    <div class="title">Tip calculator</div>
+    <div class="input-container">
+        <input class="input" type="number" id="amount" placeholder=" ">
+        <div class="label-small"></div>
+        <label for="amount" class="placeholder">Bill</label>
+    </div>
+    <br>
+    <div class="input-container">
+        <input class="input" type="number" id="guests" placeholder=" ">
+        <div class="label-small"></div>
+        <label for="number" class="placeholder">Guests</label>
+    </div>
+        <br>
+        <select id="percentage">
+            <option value="0" disabled selected>Choose percentage</option>
+            <option value="0.05">5%</option>
+            <option value="0.1">10%</option>
+            <option value="0.15">15%</option>
+            <option value="0.2">20%</option>
+        </select>
+        <button class="button" onclick="calculate()">Calculate</button>
+    <!-- для будущего изменения-->
+        <div id="tip-amount"></div> 
+        </div>
+        <br>
+        <br>
+        <div class="note" >You'are a <a href="https://www.youtube.com/watch?v=DLzxrzFCyOs">curious</a> one. I like you.</div>
+    <script src="script.js"></script>
 </body>
 </html>

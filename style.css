@@ -1,0 +1,80 @@
+  body {
+    background: linear-gradient(-45deg, #f5f110, #570c3a, #1f1242, #23d5f5);
+    background-size: 400% 400%;
+    animation: gradient 13s ease infinite;
+    height: 100vh;
+    font-family: Georgia, Times, 'Times New Roman', serif; 
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  .plain {
+    background: linear-gradient(66deg, #e38010, #1535bf);
+    min-height: 35vh;
+    margin: auto;
+    width: 250px;
+    padding: 3%;
+    border-radius: 5%;
+    }
+    .title {
+      text-align: center;
+      margin-bottom: 50px;
+      margin-top: 10px;
+      font-size: 20px;
+      font-weight: 500;
+    }
+    .input-container {
+      width: 100%;
+      height: 50px;
+      position: relative;
+    }
+    .input {
+      background-color: #d7d7f5;
+      border-radius: 8px;
+      border: 0;
+      color: rgb(0, 0, 0);
+      font-size: 16px;
+      height: 45%;
+      outline: 0;
+      padding: 4px 15px 0;
+      width: 83%;
+      
+    }
+  .note {
+    position: fixed;
+    bottom: 30px;
+  }
+  .input {
+    
+  }
+
+  .button {
+    background-color: #08d;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
+    outline: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .button:active {
+    background-color: #06b;
+  }
+  
