@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+.container {
+  background-color: rgb(31, 29, 29);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
+}
+.calculator {
+  background-color: rgb(31, 29, 29);
+  width: 400px;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 25px;
+  margin: auto 30px;
+}
+.calculator h3 {
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+}
+.container__group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  position: relative;
+}
+.container__group label {
+  margin-bottom: 10px;
+  padding-left: 10px;
+  color: rgb(178, 178, 196);
+  font-size: 18px;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  pointer-events: none;
+  transition: transform 0.4s;
+  transform-origin: 0 0;
+}
+.container__group input {
+  outline: none;
+  height: 35px;
+  font-size: 16px;
+  padding: 0 10px;
+  text-align: left;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgb(178, 178, 196);
+  color: rgb(178, 178, 196);
+  transition: border-bottom .3s linear;
+  }
+  .container__group select {
+    appearance: none;
+    outline: none;
+    height: 35px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 10px;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid rgb(178, 178, 196);
+    color: crimson;
+    transition: border-bottom .3s;
+    }
+  input::placeholder {
+    color: transparent;
+  }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+.container form {
+  display: grid;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  gap: 40px;
+}
+.note {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.calculator .button {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  padding: 5px 0;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  color: rgb(14, 14, 170);
+  transition: color .5s, background-color .5s ease;
+}
+.calculator .button:hover {
+  background-color: rgb(14, 14, 170);
+  color: white;
+}
+#tip-amount {
+  background-color: whitesmoke;
+  height: 20px;
+  min-width: 100px;
+  padding: 20px 10px;
+  font-size: 18px;
+  visibility: hidden;
+  position: fixed;
+  z-index: 1;
+}
+#tip-amount.show {
+  visibility: visible;
+  animation:  fadein 0.8s linear forwards, fadeout 0.8s linear forwards 2.5s;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    bottom: 50px;
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  0% {
+    bottom: 50px;
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    }
+}
+input:focus~label, input:not(:placeholder-shown)~label {
+  transform: translate(-8px, -30px) scale(.85);
+}
+select:focus~label {
+  transform: translate(-8px, -30px) scale(.85);
+}
+input:focus, select:focus {
+  border-bottom: 2px solid rgb(14, 14, 170);
+}

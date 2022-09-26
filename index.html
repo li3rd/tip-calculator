@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="true">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="icon" href="img/icon.png" type="img/png">
+    <link href="style.css" rel="stylesheet">
+    <title>чай, индийский чай</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h3>Tip calculator</h3>
+            <form onsubmit="return false;">   
+                <div class="container__group">
+                    <input class="input" type="number" id="amount" placeholder="Сумма чека">
+                    <label for="amount" class="placeholder">Amount</label>
+                </div>
+                <div class="container__group">
+                    <input class="input" type="number" id="guests" placeholder="Количество гостей">
+                    <label for="number" class="placeholder">Number of guests</label>
+                </div>
+                <div class="container__group">
+                    <select id="percentage">
+                        <option value="0" disabled selected></option>
+                        <option value="0.05">5%</option>
+                        <option value="0.1">10%</option>
+                        <option value="0.15">15%</option>
+                        <option value="0.2">20%</option>
+                    </select>
+                    <label for="percentage">Tip percentage</label>
+                </div>
+                <button class="button" onclick="calculate()">Calculate</button>
+            </form>
+        </div>
+        <div id="tip-amount"></div>
+    </div>
+        <div class="note" >You'are a <a target="_blank" href="https://www.youtube.com/watch?v=DLzxrzFCyOs">curious</a> one. I like you.</div>
+    <script src="script.js"></script>
+</body>
+</html>
